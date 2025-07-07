@@ -68,6 +68,7 @@ section{
     margin-top: 3rem;
 }
 .image img{
+    /* margin-left: -30rem; */
     height: 520px;
 }
 .right{
@@ -96,6 +97,7 @@ section{
     color: white;
     border: 0;
 }
+
 .right h2:nth-child(1){
     color: transparent;
     -webkit-text-stroke: 2px black;
