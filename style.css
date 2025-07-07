@@ -20,8 +20,6 @@ section{
     position: fixed;
     width: 100%;
     margin-top: -3rem;
-    /* position: fixed; */
-    /* width: 100%; */
     background-color: red;
 }
 .menu-icon {
@@ -75,26 +73,22 @@ section{
     height: 520px;
 }
 .right{
-    position: relative;
     margin-top: 3rem;
     font-family: Urbanist;
     line-height: 3rem;
 }
 .right h2{
-    position: absolute;
+    z-index: 1;
     font-size: 3rem;
-    width: 45rem;
     margin-top: 7rem;
     font-weight: 500;
-    margin-left: -7rem;
+    display: flex;
+    justify-content: center;
 }
 .right p{
-  margin-top: 10rem;
-  margin-left: -7rem;
   font-weight: 500;
 }
 .right button{
-    margin-left: -7rem;
     height: 2rem;
     width: 10rem;
     font-weight: 600;
@@ -111,6 +105,7 @@ section{
 .right h2:nth-child(2){
     color: red;
     -webkit-text-stroke: 2px black;
+    display: none;
     animation: animate 1s ease-in-out infinite;
 }
 @keyframes animate{
@@ -152,10 +147,6 @@ section{
     margin-top: 2rem;
     cursor: pointer;
 }
-/* .cate-images:hover{
-    transform: rotate(360deg);
-    transition: 2s;
-} */
 .thumbnails P{
     text-align: center;
     font-weight: 400;
@@ -166,13 +157,14 @@ section{
     text-align: center;
     margin-top: 3rem;
     padding: 5rem;
+    color: red;
     background-image: url(leo\ text.jpeg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: slideInLeft  1s ease forwards;
-    opacity: 0;
+    animation: slideInLeft  1s ease forwards; 
+    opacity: 0; 
     animation-delay: 0s;
 }
 @keyframes slideInLeft{
@@ -325,35 +317,6 @@ letter-spacing: 0px;
     text-align: center;
 }
 
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
-.dropbtn{
-    cursor: pointer;
-    padding: 10px 16px;
-    border: none;
-    background-color: red;
-}
-.drop-content{
-    display: none;
-    position: absolute;
-    /* background-color: #f9f9f9; */
-    min-width: 160px;
-    z-index: 1;
-    padding: 20px;
-}
-.drop-content a{
-    text-decoration: none;
-    display: block;
-    line-height: 50px;
-    color: black;
-    
-}
-.dropdown:hover .drop-content{
-    display: block;
-}
-
 @media (max-width: 768px) {
  .main{
     display: grid;
@@ -377,12 +340,11 @@ letter-spacing: 0px;
    margin-top: -0.2rem;
    margin-left: -1rem;
     text-align: center;
+    z-index: 10;
    
  }
  .right p{
-    /* text-align: center; */
     margin-left: 5px;
-    margin-top: 6rem;
  }
  .right button{
     margin-left: 0;
@@ -472,8 +434,7 @@ letter-spacing: 0px;
  }
  .bag p{
     padding: 0 20px;
-
-    /* text-align: left; */
+    text-align: justify;
  }
  .BAG h1{
     align-items: center;
@@ -482,6 +443,8 @@ letter-spacing: 0px;
     padding: 4rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    animation: none;
+    opacity: 1;
    /* width: 24rem;  */
  }
  .cate-images:nth-child(2){
@@ -507,9 +470,9 @@ letter-spacing: 0px;
   justify-content: center;
   text-align: center;
    }
+   .right h2:nth-child(2){
+    display: none;
+   }
  
 }
  
-
-
-
